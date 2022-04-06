@@ -16,6 +16,7 @@ interface SideBarProps {
 
 export function SideBar({ handleClickButton, selectedGenreId }: SideBarProps) {
 
+  // genres list
   const [genres, setGenres] = useState<GenreResponseProps[]>([]);
 
   useEffect(() => {

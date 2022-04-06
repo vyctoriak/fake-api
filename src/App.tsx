@@ -36,12 +36,8 @@ export function App() {
   // selected gender per Id
   const [selectedGenreId, setSelectedGenreId] = useState(1);
 
-  // genders list
-
   // selected gender via sidebar
   const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>({} as GenreResponseProps);
-
-
 
   useEffect(() => {
     api.get<GenreResponseProps>(`genres/${selectedGenreId}`).then(response => {
